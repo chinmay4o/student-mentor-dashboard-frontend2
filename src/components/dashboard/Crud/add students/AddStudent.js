@@ -26,7 +26,7 @@ const notify1 = () => {
   //onSubmit handler
   async function addStudentHandler(e) {
     e.preventDefault();
-    const response = await fetch("http://localhost:5004/addstudents", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/addstudents", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(stuName),
@@ -43,7 +43,7 @@ const notify1 = () => {
 
   //getting all - listing studetns
   async function stuTable() {
-    const response = await fetch("http://localhost:5004/students", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/students", {
       method: "GET",
     });
 
@@ -55,7 +55,7 @@ const notify1 = () => {
   //delete student
   async function deleteStudent(id) {
     console.log(id);
-    const response = await fetch("http://localhost:5004/studentDelete", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/studentDelete", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id }),

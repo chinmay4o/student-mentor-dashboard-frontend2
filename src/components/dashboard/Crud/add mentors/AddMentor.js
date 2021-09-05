@@ -19,7 +19,7 @@ const AddMentor = () => {
   // onclick creating mentor
   const addMentorHandler = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5004/addmentors", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/addmentors", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(mentorName),
@@ -33,7 +33,7 @@ const AddMentor = () => {
 
   // getting mentors array to map in table
   async function getMentors() {
-    const response = await fetch("http://localhost:5004/mentors", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/mentors", {
       method: "GET",
     });
 
@@ -45,7 +45,7 @@ const AddMentor = () => {
   //delete mentor
   async function deleteMentor(id) {
     console.log(id);
-    const response = await fetch("http://localhost:5004/mentorDelete", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/mentorDelete", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id }),
@@ -76,11 +76,14 @@ const AddMentor = () => {
   //useEffect hook
   useEffect(() => {
     getMentors();
+    console.log(window.innerWidth)
+   
   }, []);
 
   return (
     <div className="addMentor-parent">
       <Dashboard />
+      {/* {window.innerWidth > 600 ? <Dashboard /> : null} */}
       <ToastContainer />
       <div className="addMentor-container">
         <div className="row g-4">

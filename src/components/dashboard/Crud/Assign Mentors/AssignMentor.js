@@ -23,7 +23,7 @@ const AssignMentor = () => {
   }
   //getting students from database
   const listStudents = async () => {
-    const response = await fetch("http://localhost:5004/students", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/students", {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -37,7 +37,7 @@ const AssignMentor = () => {
 
   //getting mentors from database
   async function listMentors() {
-    const response = await fetch("http://localhost:5004/mentors", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/mentors", {
       method: "GET",
       Accept: "application/json",
     });
@@ -100,7 +100,7 @@ const AssignMentor = () => {
     //  e.preventDefault();
     console.log(assignStudents);
     console.log(assignMentors);
-    const response = await fetch("http://localhost:5004/assignmentor", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/assignmentor", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

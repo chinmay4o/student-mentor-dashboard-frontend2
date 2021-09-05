@@ -42,7 +42,7 @@ const EditStudent = () => {
   //onsubmit handler
   async function onSubmitHandler(e) {
     e.preventDefault();
-    const response = await fetch("http://localhost:5004/updatestudents", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/updatestudents", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

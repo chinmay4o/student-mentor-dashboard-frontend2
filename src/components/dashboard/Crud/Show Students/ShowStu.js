@@ -10,7 +10,7 @@ const ShowStu = () => {
 
   //getting all studetns
   async function getStudentDetails() {
-    const response = await fetch("http://localhost:5004/students", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/students", {
       method: "GET",
     });
 
@@ -21,7 +21,7 @@ const ShowStu = () => {
 
   //getting all menotrs
   async function getMentorDetails() {
-    const response = await fetch("http://localhost:5004/mentors", {
+    const response = await fetch("https://student-mentor-dashboard.herokuapp.com/mentors", {
       method: "GET",
     });
 

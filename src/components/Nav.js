@@ -9,9 +9,8 @@ const Nav = () => {
         style={{ "minHeight": "70px" }}
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#" >
-            <h2 className="fs-2 fw-bold">Assignments</h2>
-          </a>
+            <h2 className="fs-2 fw-bold navbar-brand">Assignments</h2>
+     
           <button
             className="navbar-toggler"
             type="button"
@@ -41,7 +40,7 @@ const Nav = () => {
                 </Link>
               </li>
               <li className="nav-item pe-3">
-                <Link className="nav-link" to="/dashboard">
+                <Link className="nav-link" to="/addstudent">
                   {" "}
                   Dashboard
                 </Link>
@@ -73,25 +72,33 @@ const Nav = () => {
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li>
                     <button className="dropdown-item" type="button">
-                    <Link to="/contact">
+                    <Link to="/addstudent">
                   {" "}
-                  Contact Us
+                  AddStudent
                 </Link>
                     </button>
                   </li>
                   <li>
                     <button className="dropdown-item" type="button">
-                    <Link  to="/register">
+                    <Link  to="/addmentor">
                   {" "}
-                  Register
+                  AddMentor
                 </Link>
                     </button>
                   </li>
                   <li>
                     <button className="dropdown-item" type="button">
-                    <Link to="/login">
+                    <Link to="/assignmentor">
                   {" "}
-                  Login
+                  Assign Mentor
+                </Link>
+                    </button>
+                  </li>
+                  <li>
+                    <button className="dropdown-item" type="button">
+                    <Link to="/changementor">
+                  {" "}
+                  Change Mentor
                 </Link>
                     </button>
                   </li>
